@@ -1,0 +1,45 @@
+
+body {
+    &.has--loader {
+        .ajax-loader__container {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &.has--no-scroll {
+        position: fixed;
+        width: 100%;
+        top:0;
+        left: 0;
+        height: 100%;
+        overflow-y: scroll;
+    }
+}
+
+/**
+ * Hide Images Alt Text
+ * Hide Titles/Texts
+ */
+.has--lazy {
+    color: transparent;
+    opacity: 0;
+
+    + h4 {
+        @include hide-text;
+    }
+}
+
+/**
+ * Slick prevent rendering
+ * List of class has slick
+ */
+.slick-class-here {
+    opacity: 0;
+    visibility: hidden;
+
+    &.slick-initialized {
+        opacity: 1;
+        visibility: visible;
+    }
+}

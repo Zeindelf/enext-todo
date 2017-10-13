@@ -1,0 +1,65 @@
+
+.content {
+    @include container;
+
+    &__insert {
+        input[type="text"] {
+            background: $color-gray-lighten;
+            border-bottom: 1px solid rgba($color-gray-darken, .1);
+            box-shadow: 0 5px 5px -5px rgba($color-gray-darken, .2);
+            color: rgba($color-gray-darken, .35);
+            @include rem(font-size, 24px);
+            line-height: 2.4;
+            @include rem(margin-top, 32px);
+            @include rem(margin-bottom, 32px);
+            @include rem(padding-left, 16px);
+            @include rem(padding-right, 16px);
+            width: 100%;
+            transition: all .2s;
+
+            &:focus {
+                box-shadow: 0 5px 5px -5px rgba($color-gray-darken, .7);
+            }
+        }
+    }
+
+    &__task {
+        box-shadow: 0 0 10px 1px rgba($color-gray-darken, .2);
+        display: flex;
+        @include rem(font-size, 24px);
+        justify-content: space-between;
+        @include rem(margin-bottom, 8px);
+        @include rem(padding, 16px);
+        width: 100%;
+        cursor: pointer;
+        transition: all .2s;
+
+        &:hover {
+            background: darken($color-gray-light, 2);
+            box-shadow: 0 0 10px 1px rgba($color-gray-darken, .4);
+
+            .content__task--remove {
+                display: block;
+            }
+        }
+
+        &--complete {
+            p {
+                color: rgba($color-gray-darken, .2);
+                text-decoration: line-through;
+            }
+        }
+
+        &--remove {
+            color: tomato;
+            @include font-weight(bold);
+            display: none;
+            text-transform: uppercase;
+            @include rem(font-size, 24px);
+
+            &:hover {
+                color: darken(tomato, 15);
+            }
+        }
+    }
+}

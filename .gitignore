@@ -1,0 +1,7 @@
+
+/node_modules/
+/dist/
+/todo-list/node_modules/
+/todo-list/dist/
+/todo-list-refactored/node_modules/
+/todo-list-refactored/dist/

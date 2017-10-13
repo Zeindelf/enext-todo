@@ -1,0 +1,37 @@
+
+%btn {
+    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    @include font-weight(normal);
+    @include rem(font-size, 16px);
+
+    &--reset {
+        @include reset-button;
+    }
+
+    &--white {
+        color: $color-white;
+        border-color: $color-white;
+
+        &:hover {
+            color: $color-black;
+            background: $color-white;
+        }
+    }
+
+    &--black {
+        color: $color-white;
+        background: $color-black;
+        border-color: $color-black;
+
+        &:hover {
+            border-color: lighten($color-black, 10%);
+            background: lighten($color-black, 25%);
+        }
+    }
+}

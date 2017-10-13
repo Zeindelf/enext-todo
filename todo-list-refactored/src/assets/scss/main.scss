@@ -1,0 +1,31 @@
+
+@import './__config-base.scss';
+
+/**
+ * Generic
+ */
+@import './generic/_reset.scss';
+@import './generic/_initialize.scss';
+
+/**
+ * Vendor
+ * Compiled Styles
+ */
+@import './vendor/_includes.scss';
+
+/**
+ * Elements
+ */
+@import './elements/_root.scss';
+
+/**
+ * Module Geral
+ */
+@import './layouts/geral/__geral-base.scss';
+
+/**
+ * Utils
+ * Helpers Classes & IE10+ Fallback
+ */
+@import './utils/_helpers.scss';
+@import './utils/_ie-fallback.scss';

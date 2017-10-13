@@ -1,0 +1,21 @@
+doctype html
+html(lang="pt-BR")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title To-Do List
+
+        include ./_partials/includes/_geral__google-fonts.pug
+
+        link(rel="stylesheet", href="assets/css/main.css")
+    body
+
+        include ./_partials/header/main-header.pug
+        include ./_partials/content/main-content.pug
+        include ./_partials/footer/main-footer.pug
+
+        <div class="x-overlay js--overlay"></div>
+        include ./_partials/includes/_geral__ajax-loader.pug
+
+        script(src="assets/js/main.js")

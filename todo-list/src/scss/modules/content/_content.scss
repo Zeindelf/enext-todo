@@ -1,0 +1,61 @@
+
+.content {
+    &__insert {
+        input[type="text"] {
+            background: $_grey-color-3;
+            border-bottom: 1px solid rgba($_grey-color-1, .1);
+            box-shadow: 0 5px 5px -5px rgba($_grey-color-1, .2);
+            color: rgba($_grey-color-1, .35);
+            font-size: $_font-size-large;
+            line-height: 2.4;
+            margin: 2em 0;
+            padding: 0 1em;
+            width: 100%;
+            transition: all .2s;
+
+            &:focus {
+                box-shadow: 0 5px 5px -5px rgba($_grey-color-1, .7);
+            }
+        }
+    }
+
+    &__task {
+        box-shadow: 0 0 10px 1px rgba($_grey-color-1, .2);
+        display: flex;
+        font-size: $_font-size-large;
+        justify-content: space-between;
+        margin-bottom: .5em;
+        padding: 1em;
+        width: 100%;
+        cursor: pointer;
+        transition: all .2s;
+
+        &:hover {
+            background: darken($_grey-color-3, 2);
+            box-shadow: 0 0 10px 1px rgba($_grey-color-1, .4);
+
+            .content__task--remove {
+                display: block;
+            }
+        }
+
+        &--complete {
+            p {
+                color: rgba($_grey-color-1, .2);
+                text-decoration: line-through;
+            }
+        }
+
+        &--remove {
+            color: tomato;
+            font-weight: $_font-weight-bold;
+            display: none;
+            text-transform: uppercase;
+            font-size: $_font-size-large * .7;
+
+            &:hover {
+                color: darken(tomato, 15);
+            }
+        }
+    }
+}
